@@ -1,6 +1,6 @@
 import React from 'react'; //eslint-disable-line
 
-export default ({values, selectedValue, onChange}) => {
+const DropDown = ({values, selectedValue, onChange}) => {
   return (
     <select value={selectedValue} onChange={onChange}>
     {
@@ -9,3 +9,12 @@ export default ({values, selectedValue, onChange}) => {
     </select>
   );
 };
+
+const {arrayOf, func, string} = React.PropTypes;
+DropDown.propTypes = {
+  onChange: func.isRequired,
+  selectedValue: string.isRequired,
+  values: arrayOf(string).isRequired
+};
+
+export default DropDown;
