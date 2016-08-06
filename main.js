@@ -1,61 +1,52 @@
+/*global dispatch */ // defined in redux-lite.js
 import React from 'react'; //eslint-disable-line
 import ReactDOM from 'react-dom';
 import reduxLite from './redux-lite.js';
+import Counter from './counter.js';
 import DropDown from './drop-down.js';
 import './demo.css';
 
+// These reducers don't need to examine the current state
+// in order to determine the new state.
+// That is why their first parameter is "_".
 const reducers = {
-  decrement: state => ({number: state.number - 1}),
-  increment: state => ({number: state.number + 1}),
-  selectColor: (_, color) => ({selectedColor: color}),
-  reset: () => ({number: 0})
+  countChange: (_, count) => ({count}),
+  selectColor: (_, color) => ({selectedColor: color})
 };
 
-class Counter extends React.Component {
+class Main extends React.Component {
   constructor() {
     super();
     this.state = {
-      number: 0,
       colors: ['Red', 'Green', 'Blue'],
+      count: 0,
       selectedColor: 'Red'
     };
   }
-  decrement() {
-    dispatch(reducers.decrement);
+
+  render() {
+    const {colors, count, selectedColor} = this.state;
+    return <div>
+      <Counter count={count} onChange={this.countChange}/>
+      <DropDown values={colors}
+        selectedValue={selectedColor}
+        onChange={this.selectColor}/>
+      You selected {selectedColor}.
+    </div>;
   }
-  increment() {
-    dispatch(reducers.increment);
+
+  countChange(newCount) {
+    dispatch(reducers.countChange, newCount);
   }
+
   selectColor(event) {
     const color = event.target.value;
     dispatch(reducers.selectColor, color);
   }
-  reset() {
-    dispatch(reducers.reset);
-  }
-  render() {
-    const {colors, number, selectedColor} = this.state;
-    return <div>
-      <div>
-        <button onClick={this.decrement}>-</button>
-        {number}
-        <button onClick={this.increment}>+</button>
-      </div>
-      <div>
-        <button onClick={this.reset}>Reset</button>
-      </div>
-      <div>
-        <DropDown values={colors}
-          selectedValue={selectedColor}
-          onChange={this.selectColor}/>
-        You selected {selectedColor}.
-      </div>
-    </div>;
-  }
 }
 
 const topComponent = ReactDOM.render(
-  <Counter/>,
+  <Main/>,
   document.getElementById('content'));
 
-const dispatch = reduxLite(topComponent);
+reduxLite(topComponent);
