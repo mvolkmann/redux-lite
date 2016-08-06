@@ -21,6 +21,11 @@ not a fully populated state object.
 This object is passed to the setState method of the topmost component
 which performs a shallow merge to create the new state.
 
+This solution makes the assumption that holding all state
+in the topmost component and re-rendering it on every change
+is acceptable for most applications.
+It will not work otherwise.
+
 To run the demo,
 * npm install
 * npm start
