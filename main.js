@@ -8,7 +8,7 @@ import './demo.css';
 
 // These reducers don't need to examine the current state
 // in order to determine the new state.
-// That is why their first parameter is "_".
+// That is why their first parameter is "_" instead of "state".
 const reducers = {
   countChange: (_, count) => ({count}),
   selectColor: (_, color) => ({selectedColor: color})
@@ -45,8 +45,6 @@ class Main extends React.Component {
   }
 }
 
-const topComponent = ReactDOM.render(
+reduxLite(ReactDOM.render(
   <Main/>,
-  document.getElementById('content'));
-
-reduxLite(topComponent);
+  document.getElementById('content')));
