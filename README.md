@@ -10,7 +10,7 @@ It retains the primary benefits of Redux which are:
 Rather that holding state in a Redux store,
 all state is held in the topmost component.
 
-Importing redux-lite.js creates a global dispatch function
+Importing redux-lite.js creates a global "dispatch" function
 that takes a reducer function and an optional payload.
 
 Reducer functions are passed the current state
