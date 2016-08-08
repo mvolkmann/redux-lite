@@ -26,6 +26,9 @@ in the topmost component and re-rendering it on every change
 is acceptable for most applications.
 It will not work otherwise.
 
+Redux works with any web framework,
+but this approach assumes the use of React.
+
 To run the demo,
 * npm install
 * npm start
