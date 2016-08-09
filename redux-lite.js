@@ -6,6 +6,6 @@
 // They only need to return the changes to be made to state,
 // not the full new state since setState performs a shallow merge.
 export default topComponent => {
-  window.dispatch = (reducerFn, payload) =>
-    topComponent.setState(reducerFn(topComponent.state, payload));
+  window.dispatch = (reducerFn, payload, error, meta) =>
+    topComponent.setState(reducerFn(topComponent.state, payload, error, meta));
 };
