@@ -46,7 +46,7 @@
 
 ## Conclusion
 I believe that for most React applications, the simplicity this approach brings
-far offsets any of the downsides.
+far outweights any of the downsides.
 
 ## Steps to run the demo
 * npm install
