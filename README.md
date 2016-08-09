@@ -26,6 +26,8 @@
 * These reducers functions differ a bit from those in Redux.
   * Each is intended to handle a specific "action"
     which frees it from needing to test an action type.
+    No more having to examine every reducer function to
+    determine what happens when a given action is dispatched.
   * They are passed the current state.  However, instead of
     being passed an action object, they are passed three optional arguments:
     payload, error flag, and metadata object.
