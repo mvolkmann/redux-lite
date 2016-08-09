@@ -57,5 +57,6 @@ far outweights any of the downsides.
 
 ## Steps to use in your app
 To use this just copy one file from this repo, redux-lite.js.
-This is so small that it's not worth the time to turn it into an npm package.
+This is so small that it's not worth turning it into an npm package.
+The package.json file is much larger than this.
 Check it out!
