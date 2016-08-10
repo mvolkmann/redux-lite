@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "the main benefits of Redux, but far simpler",
   "scripts": {
-    "start": "webpack-dev-server --content-base . --inline"
+    "start": "webpack-dev-server --content-base ./demo --inline"
   },
   "author": "R. Mark Volkmann",
   "license": "MIT",

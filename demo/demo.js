@@ -1,7 +1,7 @@
 /*global dispatch */ // defined in redux-lite.js
 import React from 'react'; //eslint-disable-line
 import ReactDOM from 'react-dom';
-import reduxLite from './redux-lite.js';
+import reduxLite from '../redux-lite.js';
 import Counter from './counter.js';
 import DropDown from './drop-down.js';
 import './demo.css';
