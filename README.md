@@ -26,6 +26,8 @@
 * These reducers functions differ a bit from those in Redux.
   * Each is intended to handle a specific "action"
     which frees it from needing to test an action type.
+    No more having to examine every reducer function to
+    determine what happens when a given action is dispatched.
   * They are passed the current state.  However, instead of
     being passed an action object, they are passed three optional arguments:
     payload, error flag, and metadata object.
@@ -55,5 +57,6 @@ far outweights any of the downsides.
 
 ## Steps to use in your app
 To use this just copy one file from this repo, redux-lite.js.
-This is so small that it's not worth the time to turn it into an npm package.
+This is so small that it's not worth turning it into an npm package.
+The package.json file is much larger than this.
 Check it out!
