@@ -1,5 +1,6 @@
 ## Goals
-* Create a greatly simplified version of Redux, taking inspiration from a post by Dan Abramov.
+* Create a greatly simplified version of Redux, taking inspiration from a post by Dan Abramov
+  at https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.5pwkkt911.
 * Retain the primary benefits of Redux which are:
   1. representing all app state in a single object</li>
   1. only changing state by dispatching an "action"</li>

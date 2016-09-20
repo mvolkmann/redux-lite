@@ -25,14 +25,23 @@ class Main extends React.Component {
   }
 
   render() {
-    const {colors, count, selectedColor} = this.state;
+    const {colors, count, selectedColor, selectedName} = this.state;
     return <div>
       <Counter count={count} onChange={this.countChange}/>
       <DropDown values={colors}
         selectedValue={selectedColor}
         onChange={this.selectColor}/>
       You selected {selectedColor}.
+
+      <select value={selectedName} onChange={e => this.selectName(e)}>
+        <option value="Mark">Mark</option>
+        <option value="Tami">Tami</option>
+      </select>
     </div>;
+  }
+
+  selectName(event) {
+    this.setState({selectedName: event.target.value});
   }
 
   countChange(newCount) {
