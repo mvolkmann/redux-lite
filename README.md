@@ -1,3 +1,5 @@
+It appears I'll need to pick a different name for this since https://github.com/zefhemel/redux-lite already exists.
+
 ## Goals
 * Create a greatly simplified version of Redux, taking inspiration from a post by Dan Abramov
   at https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.5pwkkt911.
