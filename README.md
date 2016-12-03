@@ -26,7 +26,7 @@ It appears I'll need to pick a different name for this since https://github.com/
   and call setState on that component.
   An advantage of this function being global is that
   it becomes easy to dispatch "actions" from any component.
-* These reducers functions differ a bit from those in Redux.
+* These reducer functions differ a bit from those in Redux.
   * Each is intended to handle a specific "action"
     which frees it from needing to test an action type.
     No more having to examine every reducer function to
